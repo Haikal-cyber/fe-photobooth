@@ -8,12 +8,12 @@ export function middleware(request: NextRequest) {
 
   if (pathname.startsWith("/generate")) {
     if (!token?.value) {
-      return NextResponse.redirect(new URL("/", request.url));
+      return NextResponse.redirect(new URL("/login", request.url));
     }
     return NextResponse.next();
   }
 
-  if (pathname === "/") {
+  if (pathname === "/" || pathname === "/login") {
     if (token?.value) {
       return NextResponse.redirect(new URL("/generate", request.url));
     }
@@ -24,5 +24,5 @@ export function middleware(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ["/", "/generate"],
+  matcher: ["/", "/login", "/generate"],
 };

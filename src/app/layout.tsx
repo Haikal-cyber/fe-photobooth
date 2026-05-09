@@ -5,7 +5,8 @@ import "./globals.css";
 const playfair = Playfair_Display({
   variable: "--font-playfair",
   subsets: ["latin"],
-  weight: ["600", "700"],
+  weight: ["400", "500", "600", "700"],
+  style: ["normal", "italic"],
 });
 
 const dmSans = DM_Sans({
@@ -15,8 +16,12 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Masuk · Monostrip Photobooth",
-  description: "Login untuk aplikasi photobooth Monostrip",
+  title: {
+    default: "Monostrip Photobooth",
+    template: "%s · Monostrip Photobooth",
+  },
+  description:
+    "Photobooth dengan nuansa editorial — bingkai momen berarti dalam hitam-putih yang tenang.",
 };
 
 export default function RootLayout({

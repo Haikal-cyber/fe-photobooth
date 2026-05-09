@@ -109,7 +109,7 @@ export default function GeneratePage() {
     } catch {
       /* tetap arahkan ke login */
     }
-    router.push("/");
+    router.push("/login");
     router.refresh();
   }
 
