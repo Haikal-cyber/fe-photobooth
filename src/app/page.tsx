@@ -47,6 +47,9 @@ const BOOK_FREE_TRIAL_WHATSAPP_URL =
 const FOOTER_INSTAGRAM_URL = "https://www.instagram.com/monostrip.id/";
 const FOOTER_TIKTOK_URL = "https://www.tiktok.com/@monostrip.id";
 const FOOTER_WHATSAPP_URL = "https://wa.me/6281244283690";
+const SUPPORT_EMAIL = "monostrip.id@gmail.com";
+const BUSINESS_ADDRESS =
+  "Halona Village A18, Kabupaten Malang, Jawa Timur";
 
 export default function LandingPage() {
   return (
@@ -522,10 +525,32 @@ export default function LandingPage() {
 
         <footer className="mx-auto max-w-7xl px-6 py-14 md:px-10 lg:px-14">
           <div className="border-t border-[#1A1A1A]/10 pt-10">
-            <div className="flex flex-col gap-10 md:flex-row md:items-start md:justify-between">
+            <div className="flex flex-col gap-10 md:flex-row md:items-start md:justify-between md:gap-12">
               <p className="font-display text-lg font-semibold text-[#1A1A1A]">
                 Monostrip
               </p>
+              <div className="max-w-sm">
+                <p className="text-[0.65rem] font-semibold uppercase tracking-[0.2em] text-[#1A1A1A]/55">
+                  Kontak support
+                </p>
+                <ul className="mt-3 space-y-3 text-sm leading-relaxed tracking-wide text-[#1A1A1A]/78">
+                  <li>
+                    <span className="text-[#1A1A1A]/50">Email: </span>
+                    <a
+                      href={`mailto:${SUPPORT_EMAIL}`}
+                      className="font-medium text-[#1A1A1A] underline decoration-[#1A1A1A]/20 underline-offset-4 transition-colors hover:text-[#A3482E] hover:decoration-[#A3482E]/40"
+                    >
+                      {SUPPORT_EMAIL}
+                    </a>
+                  </li>
+                  <li>
+                    <span className="text-[#1A1A1A]/50">Alamat: </span>
+                    <span className="text-[#1A1A1A]/85">
+                      {BUSINESS_ADDRESS}
+                    </span>
+                  </li>
+                </ul>
+              </div>
               <nav aria-label="Sosial dan kontak">
                 <ul className="flex flex-col gap-3 text-sm tracking-wide sm:flex-row sm:flex-wrap sm:gap-x-10 sm:gap-y-3">
                   <li>
